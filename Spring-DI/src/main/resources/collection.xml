@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="st1" class="com.di.spring.collection.Student">
+        <property name="name" value="Adityanarayan"/>
+        <property name="address">
+            <list>
+                <value>India</value>
+                <value>Odisha</value>
+                <value>Jajpur</value>
+            </list>
+        </property>
+        <property name="phone">
+            <set>
+                <value>1234</value>
+                <value>5678</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java" value="2month"/>
+                <entry key="C" value="2month"/>
+            </map>
+        </property>
+    </bean>
+</beans>
