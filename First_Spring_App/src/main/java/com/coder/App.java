@@ -1,10 +1,19 @@
 package com.coder;
 
 
-public class App 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        Ram ram = context.getBean("ram",Ram.class);
+        ram.eat();
+        Shyam shyam = context.getBean("shyam",Shyam.class);
+        shyam.sleep();
+
     }
 }
