@@ -2,6 +2,7 @@ package com.sterotype;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import java.util.List;
 
 @Component("emp")
 public class Employee {
@@ -9,6 +10,17 @@ public class Employee {
     private String name;
     @Value("1")
     private  int id;
+
+    @Value(("#{ad}"))
+    private List<String> addrss;
+
+    public List<String> getAddrss() {
+        return addrss;
+    }
+
+    public void setAddrss(List<String> addrss) {
+        this.addrss = addrss;
+    }
 
     public String getName() {
         return name;
@@ -31,6 +43,7 @@ public class Employee {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
+                ", addrss=" + addrss +
                 '}';
     }
 }
