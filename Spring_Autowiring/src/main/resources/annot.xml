@@ -6,9 +6,15 @@
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
 
     <context:annotation-config></context:annotation-config>
+
     <bean name="address" class="com.annot.Address">
         <property name="city" value="Pune"/>
         <property name="state" value="Maharastran"/>
+    </bean>
+
+    <bean name="address2" class="com.annot.Address">
+        <property name="city" value="Bhubaneswar"/>
+        <property name="state" value="Odisha"/>
     </bean>
 
     <bean name="st" class="com.annot.Student"></bean>
